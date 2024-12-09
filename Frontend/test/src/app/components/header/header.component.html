@@ -1,0 +1,21 @@
+<header>
+    <div class="logo">
+      <a (click)="navigateTo('/')">
+        <h2>JANUS TEST</h2>
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li >
+          <a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
+        </li>
+        <li >
+          <a [routerLink]="['/productos/nuevo']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Agregar Producto</a>
+        </li>
+       
+      </ul>
+    </nav>
+  
+    
+    
+  </header>

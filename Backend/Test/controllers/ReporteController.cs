@@ -19,6 +19,8 @@ namespace test.Controllers{
 
             string query = "SELECT * FROM vw_StockProducto";
 
+           
+
             using var comando = new MySqlCommand(query, conexion);
             using var reader = await comando.ExecuteReaderAsync();
 
