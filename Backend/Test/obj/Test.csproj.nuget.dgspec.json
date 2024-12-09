@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Franco\\test\\Backend\\Test\\Test.csproj": {}
+    "C:\\Users\\Franco\\test\\backend\\test\\Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Franco\\test\\Backend\\Test\\Test.csproj": {
+    "C:\\Users\\Franco\\test\\backend\\test\\Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Franco\\test\\Backend\\Test\\Test.csproj",
+        "projectUniqueName": "C:\\Users\\Franco\\test\\backend\\test\\Test.csproj",
         "projectName": "Test",
-        "projectPath": "C:\\Users\\Franco\\test\\Backend\\Test\\Test.csproj",
+        "projectPath": "C:\\Users\\Franco\\test\\backend\\test\\Test.csproj",
         "packagesPath": "C:\\Users\\Franco\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Franco\\test\\Backend\\Test\\obj\\",
+        "outputPath": "C:\\Users\\Franco\\test\\backend\\test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Franco\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -46,6 +46,14 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.11, )"
+            },
+            "Microsoft.DotNet.Watcher.Tools": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[9.1.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
