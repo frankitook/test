@@ -1,30 +1,32 @@
-<h4>Informe de stock de los productos:</h4>
-<div >
-    <table >
-      <thead>
-        <tr>
-          <th>ID Producto</th>
-          <th>Nombre</th>
-          <th>Precio</th>
-          <th>Tipo Producto</th>
-          <th>Cantidad</th>
-          <th>Acciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let item of reporte">
-          <td>{{ item.idProducto }}</td>
-          <td>{{ item.nombre }}</td>
-          <td>$ {{ item.precio }}</td>
-          <td>{{ item.tipoProducto }}</td>
-          <td>{{ item.cantidad }}</td>
-          <td>
-            <button [routerLink]="['/productos/modificar']">Modificar</button>
-            <button (click)="confirmDelete(item.idProducto,item.nombre)">Eliminar</button>
-              
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
- 
+<h3>Informe de stock de los productos:</h3>
+
+
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID Producto</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Tipo Producto</th>
+        <th>Cantidad</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of reporte">
+        <td>{{ item.idProducto }}</td>
+        <td>{{ item.nombre }}</td>
+        <td>$ {{ item.precio }}</td>
+        <td>{{ item.tipoProducto }}</td>
+        <td>{{ item.cantidad }}</td>
+        <td>
+          <button (click)="modificarProducto(item)">Modificar</button>
+          <button (click)="confirmarEliminacion(item.idProducto, item.nombre)">Eliminar</button>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
