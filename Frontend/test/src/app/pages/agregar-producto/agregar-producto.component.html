@@ -1,1 +1,33 @@
-<p>agregar-producto works!</p>
+<div class="form-container">
+  <h1>Agregar Producto</h1>
+  <form #productoForm="ngForm" (ngSubmit)="onSubmit(productoForm)">
+    <div class="form-group">
+      <label for="nombre">Nombre del Producto</label>
+      <input type="text" id="nombre" name="nombre" ngModel required placeholder="Ingrese el nombre del producto">
+    </div>
+
+    <div class="form-group">
+      <label for="precio">Precio</label>
+      <input type="number" id="precio" name="precio" ngModel required placeholder="Ingrese el precio del producto">
+    </div>
+
+    <div class="form-group">
+        <label for="idTipo">Tipo de Producto</label>
+        <select id="idTipoProducto" name="idTipoProducto" [(ngModel)]="selectedTipo" required>
+          <option value="">Seleccione un tipo</option>
+          <option *ngFor="let tipo of tipos" [value]="tipo.idTipoProducto">{{ tipo.descripcion }}</option>
+        </select>
+      </div>
+      
+
+    <div class="form-group">
+      <label for="cantidad">Cantidad</label>
+      <input type="number" id="cantidad" name="cantidad" ngModel required placeholder="Ingrese el stock">
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" >Agregar Producto</button>
+    </div>
+  </form>
+</div>
+

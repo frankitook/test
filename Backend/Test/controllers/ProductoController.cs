@@ -35,7 +35,7 @@ namespace test.Controllers
             }
         }
 
-    [HttpPost("agregar")]
+   [HttpPost("agregar")]
     public async Task<IActionResult> AgregarProducto([FromBody] Dictionary<string, object> producto){
     var conexionString = Config.GetConnectionString();
 
@@ -54,8 +54,9 @@ namespace test.Controllers
 
     await comando.ExecuteNonQueryAsync();
 
-    return Ok("Producto agregado con éxito.");
+    return Ok(new { mensaje = "Producto agregado con éxito." }); 
 }
+
 
     [HttpPut("modificar")]
     public async Task<IActionResult> ModificarProducto([FromBody] Dictionary<string,object> producto){
@@ -76,7 +77,7 @@ namespace test.Controllers
 
     await comando.ExecuteNonQueryAsync();
 
-    return Ok("Producto modificado con éxito.");
+    return Ok(new { mensaje = "Producto modificado con éxito." }); 
 
 }
 

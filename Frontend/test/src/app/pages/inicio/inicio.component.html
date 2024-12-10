@@ -18,7 +18,11 @@
           <td>$ {{ item.precio }}</td>
           <td>{{ item.tipoProducto }}</td>
           <td>{{ item.cantidad }}</td>
-          <td><button>Eliminar</button></td>
+          <td>
+            <button [routerLink]="['/productos/modificar']">Modificar</button>
+            <button (click)="confirmDelete(item.idProducto,item.nombre)">Eliminar</button>
+              
+          </td>
         </tr>
       </tbody>
     </table>
